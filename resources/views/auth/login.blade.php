@@ -44,9 +44,9 @@
                         <input type="checkbox" name="remember" class="rounded border-gray-200 text-[#0d6efd] focus:ring-[#0d6efd]">
                         <span class="ml-2 text-xs font-bold text-gray-400 uppercase tracking-tighter">Remember me</span>
                     </label>
-                    @if (Route::has('password.request'))
+                    {{-- @if (Route::has('password.request'))
                         <a class="text-[10px] font-black text-[#0d6efd] uppercase tracking-tighter hover:underline" href="{{ route('password.request') }}">Forgot?</a>
-                    @endif
+                    @endif --}}
                 </div>
 
                 <div class="mt-8">
