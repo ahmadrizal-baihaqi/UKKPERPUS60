@@ -13,21 +13,21 @@ class UserController extends Controller
 {
     public function index()
     {
-        // 1. Ambil semua buku dengan relasi kategori, termasuk yang stoknya 0
+        
         $books = Book::with('category')
-            ->where('stok', '>=', 0) // Stok 0 tetep tampilin biar user tau bukunya ada tapi habis
+            ->where('stok', '>=', 0) 
             ->get();
 
-        // 2. Ambil data kategori buat pilihan filter di dashboard
+        
         $categories = Category::all();
 
-        // 3. Ambil riwayat pinjaman user
+        
         $myLoans = Loan::with('book.category')
                     ->where('user_id', Auth::id())
                     ->orderBy('created_at', 'desc')
                     ->get();
 
-        // 4. Kirim ke view dashboard
+        
         return view('dashboard', compact('books', 'categories', 'myLoans'));
     }
 

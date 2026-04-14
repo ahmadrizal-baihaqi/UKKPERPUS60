@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use App\Models\Category;
 use App\Models\User;
-use App\Models\Loan; // Tambahkan ini biar lebih rapi panggil Modelnya
+use App\Models\Loan; 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Hash;
@@ -86,13 +86,13 @@ class AdminController extends Controller
 
     public function updateBook(Request $request, $id)
     {
-        // === BAGIAN YANG HARUS DIGANTI (DITAMBAH VALIDASI) ===
+        
         $request->validate([
             'judul' => 'required',
             'penulis' => 'required',
             'penerbit' => 'required',
             'tahun_terbit' => 'required|numeric',
-            'stok' => 'required|numeric|min:1', // Mencegah angka minus saat edit
+            'stok' => 'required|numeric|min:1', 
             'category_id' => 'required',
             'cover' => 'nullable|image|mimes:jpeg,png,jpg|max:2048'
         ]);
