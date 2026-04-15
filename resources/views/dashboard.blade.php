@@ -120,7 +120,7 @@
                     </div>
 
                     <div class="mb-8 flex justify-between items-center">
-                        <h4 class="text-xl font-black uppercase tracking-tighter italic">Koleksi Terbaru</h4>
+                        <h4 class="text-xl font-black uppercase tracking-tighter italic">Koleksi Buku</h4>
                         <button @click="tab = 'explore'" class="text-[10px] font-black uppercase text-[#0d6efd] tracking-widest hover:underline">Lihat Semua</button>
                     </div>
                     <div class="grid grid-cols-4 gap-8">
